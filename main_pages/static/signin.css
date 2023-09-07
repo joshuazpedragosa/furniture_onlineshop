@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F9F9F9;
+}
+.content{
+    position: relative;
+    height: 400px;
+    left: 700px;
+    width: 400px;
+    top: 150px;
+}
+.side-box{
+    position: absolute;
+    height: 760px;
+    width: 450px;
+    background-color: #42A380;
+    margin: auto;
+    display:inline;
+    text-align: center;
+    padding-right: 30px;
+    padding-top: 200px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+}
+.open-signup{
+    background-color: #42A380;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+.open-signup:hover{
+    background-color: #3c9071;
+}
+.card{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 60%;
+}
+.header-span{
+    text-align: center;
+    padding-left: 55px;
+    padding-bottom: 30px;
+    color: #42A380;
+}
+.costume-icon{
+    background-color: #42A380;
+    padding: 20px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 1px;
+}
+.input-span{
+    padding-bottom: 30px;
+}
+input[type=text], input[type=password]{
+    width: 140%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #C8FEDA;
+    box-shadow: 0 30px 40px #C8FEDA (0,0,0,.1);
+    border-radius: 5px;
+    padding: 10px;
+}
+input[type=text]:focus, input[type=password]:focus{
+    border-bottom: 1px solid green;
+}
+.btn-span{
+    padding-left: 80px;
+}
+input[type=submit]{
+    padding: 10px;
+    width: 80%;
+    height: 40px;
+    border-radius: 30px;
+    outline: none;
+    background-color: #42A380;
+    color: #fff;
+    border: 1px solid #42A380;
+}
+input[type=submit]:hover{
+    background-color: #3c9071;
+}
+input[type=submit]:focus{
+    background-color: #3c9071;
+}
+.right-header{
+    color: white;
+}
+.check-span{
+    color: #3c9071;
+}
+.errmsg{
+    color: red;
+}
+.smsg{
+    color: #19C156;
+}

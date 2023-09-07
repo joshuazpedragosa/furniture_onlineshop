@@ -1,0 +1,102 @@
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+body{
+   position: relative;
+   background-color: #F9F9F9;
+}
+.header{
+    background-color: #42A380;
+    height: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 40px;
+}
+.title{
+    color: #fff;
+}
+.content{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 180px;
+    height: 500px;
+    text-align: center;
+    background-image: url('living_room.png');
+    height: 702px;
+}
+.wc-note{
+    font-size: 35px;
+    color: #fff;
+    width: 40%;
+    height: 40%;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 80px 80px #a2a0a0;
+    border-radius: 15px;
+}
+.start-btn{
+    width: 160px;
+    height: 45px;
+    border-radius: 30px;
+    outline: none;
+    color: #fff;
+    background-color: #42A380;
+    border: #42A380;
+}
+.start-btn:hover{
+    background-color: #3c9071;
+}
+.abt-us{
+    position: absolute;
+    left: 94%;
+}
+.title-span{
+    position: absolute;
+    left: 3%;
+}
+a{
+    color: #fff;
+}
+a:hover{
+    color: #EBEDEC;
+}
+.abt-span{
+    position: absolute;
+    float: right;
+    left: 75%;
+    top: 10%;
+}
+.abt-card{
+    background-color: #F9F9F9;
+    width: 340px;
+    height: 400px;
+    box-shadow: 0 80px 80px #a2a0a0;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    display: none;
+    padding: 10px; 
+}
+p{
+    font-size: 20px;
+}
+.abt-info{
+    text-align: left;
+    padding-left: 10px;
+}
+h2{
+    color: #3c9071;
+}
+.smpl-gmail{
+    color: blue;
+}
+.close-abt{
+    color: black;
+}
+.close-span{
+    text-align: right;
+}

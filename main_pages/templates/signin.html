@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Log In</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'signin.css' %}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+    <script src="{% static 'js/validation.js' %}"></script>
+</head>
+<body>
+    <div class="side-box">
+       Welcome Back!<br>
+        <button onclick="location.href='/create_account'" class="open-signup">Create Account</button>
+        <button onclick="location.href='/'" class="open-signup">Home Page</button>
+    </div>
+    <div class="content">
+        <div class="card">
+            <div>
+                <div class="header-span">
+                    <h1>
+                        <span class="costume-icon"></span>
+                        Log In
+                    </h1>
+                </div>
+                <div>
+                    <form method="POST" action="/login">
+                        {% csrf_token %}
+                        <span class="errmsg">{{msg}}</span>
+                        <span id="errmsg" class="errmsg"></span>
+                        <div class="input-span">
+                            <input type="text" id="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="input-span">
+                            <input type="password" id="password" name="password" placeholder="Password"><br><br>
+                            <a class="check-span"><input type="checkbox" onclick="showPass()">Show Password</a>
+                        </div>
+                        <div class="btn-span" align="center">
+                            <input id="signIn" type="submit" value="Sign in">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

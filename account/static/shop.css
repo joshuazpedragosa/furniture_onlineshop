@@ -1,0 +1,216 @@
+*{
+    margin-top: 0;
+}
+.shop-container{
+    margin: auto;
+    position: relative;
+}
+.shop-header{
+    display: flex;
+    margin-top: 0;
+    background-color: #42A380;
+    align-items: center;
+    padding: 8px;
+    justify-content: center;
+}
+.shop-title{
+    color: #fff;
+    font-weight: bold;
+    margin-right: 42%;
+}
+ul{
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    margin-left: 20%;
+}
+li{
+    padding-right: 20%;
+    font-size: 30px;
+}
+.shop-name{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.shop-menu{
+    text-decoration-line: none;
+    color: #42A380;
+}
+.menu-active{
+    text-decoration: underline 3px solid #42A380;
+}
+.shop-menu:hover{
+    text-decoration: underline 3px solid #42A380;
+}
+.shop-icon{
+    left: 20px;
+}
+.return{
+    margin-right: 28%;
+    font-size: 25px;
+    color: #fff;
+}
+.a-return:hover{
+    color: aqua;
+}
+.a-return{
+    color: #fff;
+}
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+  
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: left;
+  background-color: #f1f1f1;
+  height: 390px;
+}
+.card:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: left;
+  background-color: #f1f1f1;
+  height: 400px;
+  width: 320px;
+}
+.for-sale{
+    box-sizing: border-box;
+    margin: 20px;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 480px;
+    height: 480px;
+    background-color: #d0d0d0;
+    border-radius: 20px;
+}   
+.column {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+    margin: 20px;
+}
+.header-btn{
+    position: fixed;
+    top: 14%;
+    left: 33%;
+}
+.add-btn{
+    width: 135%;
+    height: 40px;
+    color: #fff;
+    background-color: #42A380;
+    border-radius: 20px;
+    border: 1px solid #42A380;
+}
+.add-btn:hover{
+    background-color: #55c199;
+}
+form{
+    padding: 20px;
+}
+.form-input{
+    margin: 20px;
+}
+input[type=text]{
+    outline: none;
+    width: 50px;
+}
+.img{
+    width: 30%;
+    border: 2px solid #42A380;
+    height: 10%;
+    max-height: 10%;
+}
+.img-span{
+    text-align: center;
+}
+.upload-prod{
+    width: 40%;
+    height: 45px;
+    background-color: #42A380;
+    border: 1px solid #42A380;
+    outline: none;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+input[type=text]{
+    width: 90%;
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #42A380;
+}
+input[type=text]:focus{
+    border-bottom: 2px solid #33f7af;
+}
+input[type=submit]{
+    width: 40%;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #42A380;
+    border: 1px solid #42A380;
+    color: #fff;
+    font-weight: bold;
+}
+input[type=submit]:hover{
+    background-color: #2fb483;
+}
+.img-size{
+    width: 100%;
+    max-height: 60%;
+    border-radius: 10px;
+}
+.price-span{
+    background-color: #70c7a7;
+    padding: 10px;
+    border-radius: 15px;
+}
+.sold-out{
+    background-color: #7e7e7e;
+    color: #fff;
+    padding: 3px;
+    width: 90px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.available{
+    color: #42A380;
+    font-weight: bold;
+}
+.add-span{
+    text-align: right;
+}
+.update-btn{
+    height: 30px;
+    width: 50%;
+    border-radius: 10px;
+    outline: none;
+    background-color: #42A380;
+    border: 1px solid #42A380;
+    color: #fff;
+}
+.update-btn:hover{
+    background-color: #70c7a7;
+}

@@ -1,0 +1,240 @@
+.content{
+    margin: auto;
+    position: relative;;
+}
+.header{
+    display: flex;
+    background-color: #42A380;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    color: #fff;
+}
+.dashboard-span{
+    margin-right: 85%;
+}
+.search-box{
+    position: absolute;
+    margin-right: 25%;
+}
+.menu-right{
+    position: absolute;
+    margin-left: 70%;
+}
+.menu{
+    font-size: 25px;
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.menu:hover{
+    text-decoration: underline 3px solid #9AFDF7;
+}
+.active{
+    text-decoration: underline 3px solid #9AFDF7;
+}
+.profile-card{
+    position: absolute;
+    background-color: #fff;
+    margin-left: 74%;
+    margin-top: 10px;
+    height: 380px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 20px 0 20px 20px grey;
+    display: none;
+}
+.my-profile-icon{
+    font-size: 40px;
+    color: #42A380;
+}
+a{
+    text-decoration-line: none;
+    color: black;
+}
+li{
+    list-style-type: none;
+    margin-left: 5px;
+    margin-right: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    border: 0.5px solid #42A380;
+    padding: 20px;
+    border-right: none;
+    border-left: none;
+    border-radius: 10px;
+}
+li:hover{
+    color: #fff;
+    background-color: #42A380;
+}
+.search{
+    outline: none;
+    height: 35px;
+    width: 250%;
+    border: 1px solid #42A380;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.product-view{
+    display: flex;
+    background-color: #fff;
+    height: 370px;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 0;
+}
+.card-main{
+    background-color: #fff;
+    height: 88%;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 20px 20px grey;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.card-blur{
+    display: none;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    padding: 80px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+.card-blur1{
+    display: none;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    padding: 80px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+.card-blur2{
+    display: none;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    padding: 80px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+.card-blur3{
+    display: none;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    padding: 80px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.table{
+    background-image: url(table.png);
+    background-size: cover;
+}
+.chair{
+    background-image: url(chair.png);
+    background-size: cover;
+}
+.cabinet{
+    background-image: url(cabinet.png);
+    background-size: cover;
+}
+.bed{
+    background-image: url(bed.png);
+    background-size: cover;
+}
+.for-sale{
+    box-sizing: border-box;
+    margin: 20px;
+    position: relative;
+}
+.column {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+    margin: 20px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: left;
+    background-color: #f1f1f1;
+    height: 350px;
+  }
+  .img-size{
+    width: 100%;
+    max-height: 50%;
+    border-radius: 10px;
+}
+.price-span{
+    background-color: #70c7a7;
+    padding: 10px;
+    border-radius: 15px;
+}
+.sold-out{
+    background-color: #7e7e7e;
+    color: #fff;
+    padding: 3px;
+    width: 90px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.available{
+    color: #42A380;
+    font-weight: bold;
+}
+.btn-order{
+    text-align: right;
+}
+.order-btn{
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+}
+.buy{
+    background-color: #42A380;
+    border: 1px solid #42A380;
+    color: #fff;
+    width: 30%;
+}
+.buy:hover{
+    background-color: #70c7a7;
+}
+.add-cart{
+    border: 1px solid #12bfb4;
+    background-color: #12bfb4;
+    width: 40%;
+}
+.add-cart:hover{
+    background-color: #1fcec3;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    {% load mathfilters %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'account_js/account.js' %}"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href=" {% static 'shop.css' %}">
+    <title>Shop</title>
+</head>
+<body class="shop-container">
+    <input type="text" id="shopAcc" value="{{shop_acc}}" hidden>
+<div class="main-header">
+    <div class="shop-header">
+        <div class="return">
+            <a href="/dashboard_acc" class="a-return"><li class="fa fa-arrow-left">Dashboard</li></a>
+        </div>
+        <h1 class="shop-title">
+           Furniture Shop
+        </h1>
+    </div>
+    <div id="shopName" class="shop-name">
+        <br>
+        {% for myshop in shop_acc %}
+        <h2>
+            {{myshop.shop_name}}
+        </h2>
+        <small>
+            Contact: <a href="#">{{myshop.shop_email}}</a>
+        </small>
+        {% endfor %}
+        <div class="header-btn">
+            <button class="add-btn" data-toggle="modal" data-target="#productForm">
+                <li class="fa fa-plus"></li>
+                Add Product
+            </button>
+        </div>
+        <ul>
+            <li><a class="shop-menu menu-active" href="#">Products</a></li>
+            <li><a class="shop-menu" href="costumer_orders">Costumers Order</a></li>
+        </ul>
+    </div>
+</div>
+    <div id="myprod" class="for-sale">
+        <div class="row">
+          {% for x in prod %}
+            {% if x.id  != '' %}
+            <div class="column">
+              <div class="card">
+                <image src="media/{{x.img}}" class="img-size">
+                  {% if x.quantity >= 1 %}
+                  <small class="available">{{x.quantity}}  Availbale</small>
+                 {% else %}
+                 <small class="sold-out">Sold Out</small>
+                 {% endif %}
+                <p>{{x.categories}}-{{x.description}}</p>
+                <p class="price-span">Price: ₱{{x.price}}</p>
+              </div>
+            </div>
+            {% else %}
+            <div class="column">
+              <h1>
+                You don't have any product
+              </h1>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+    </div>
+    
+<!-- Modal Add Product -->
+<div class="modal fade" id="productForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Add Product</h5>
+        </div>
+        <div class="modal-body">
+           <form action="insert_product" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="img-span">
+                <img id="img" class="img" src="#" alt="product image" />
+            </div>
+            <div class="form-input">
+                <input  type="file" accept="image/*" name="img" onchange="viewImg()" id="imgInp" >
+            </div>
+            <div class="form-input">
+                <input type="text" id="number" name="quantity" value="0" readonly="true"/>
+                <input type="button" onclick="incrementValue()" value="Add" />
+            </div>
+            <div class="form-input">
+                <select id="cars" name="categories">
+                    <option >Categories</option>
+                    <option value="Bed">Bed</option>
+                    <option value="Chair">Chair</option>
+                    <option value="Table">Table</option>
+                    <option value="Cabinet">Cabinet</option>
+                </select>
+            </div>
+            <div class="form-input">
+              <input type="text" name="price" value="" placeholder="Price">
+            </div>
+            <div class="form-input">
+                <label for="Remarks" data-error="wrong" data-success="right">Description: </label>
+                <textarea id="remarks" name="description" rows="4" cols="50"></textarea>
+            </div>
+            <input type="text" name="product_owner" value="{{request.session.id}}" hidden>
+            <div class="form-submit" align="center">
+                <input type="submit" class="upload-prod" value="Upload"  />
+            </div>
+           </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Create Shop -->
+<div class="modal fade" id="shopAccount" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Create Shop</h5>
+        </div>
+        <div class="modal-body" align="center">
+           <form action="create_shop" method="POST">
+            {% csrf_token %}
+                <div class="form-input">
+                    <input type="text" name="shop_name" placeholder="Shop Name" required>
+                </div>
+                <div class="form-input">
+                    <input type="text" name="shop_email" placeholder="Shop Email" required>
+                    <input type="text" name="shop_owner" value="{{request.session.id}}" hidden>
+                </div>
+                <div class="form-input">
+                    <input type="submit" value="Create Shop" />
+                </div>
+           </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="location.href='/dashboard_acc'">Dashboard</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'wc.css' %}">
+    <script src="{% static 'js/interval.js' %}"></script>
+    <title>Online Shop</title>
+</head>
+<body>
+    <div class="header">
+        <div class="title-span">
+            <h1 class="title">Furnitures Online</h1>
+        </div>
+        <div class="abt-us">
+            <a href="#" onclick="document.getElementById('abt-card').style.display='block'">About us?</a>
+        </div>
+        <div class="abt-span">
+            <div class="abt-card" id="abt-card">
+                <div class="close-span">
+                    <a class="close-abt" onclick="document.getElementById('abt-card').style.display='none'" href="#">Close</a>
+                </div>
+                <h2>About us</h2>
+                <br>
+                <p>
+                    Shop and sell Furnitures Online.<br>
+                    Make your home even better.
+                </p>
+                <br>
+                <br>
+                <p>Owner & Stakeholders</p>
+                <br>
+                <div class="abt-info">
+                    <h3>Joshua Pedragosa </h3>
+                    <h3>Sarah Mae Magpantay</h3>
+                    <h3>Jessa Viñas</h3>
+                    <h3>
+                       Erica Caisip<br>
+                        Dale Daniel Lubis
+                    </h3>
+                </div>
+                <br><br>
+                <p>Contact us: <a class="smpl-gmail" href="#">furnitures.online@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="wc-note">
+                <h1>
+                    Shop Online
+                </h1>
+                <h1>
+                    Sell Furnitures 
+                </h1>
+                <p>only at NTIH, New Things in Home</p>
+                <br>
+                <button onclick="location.href='/signin'" class="start-btn">Get Started</button>
+        </div>
+    </div>
+</body>
+</html>
